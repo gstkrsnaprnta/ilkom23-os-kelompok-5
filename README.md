@@ -28,8 +28,8 @@ Sebelum memulai, pastikan kamu sudah menginstal:
 
 1. **Clone repository ini:**
    ```bash
-   git clone https://github.com/username/repo-name.git
-   cd repo-name
+   git clone https://github.com/gstkrsnaprnta/ilkom23-os-kelompok-5.git
+   cd ilkom23-os-kelompok-5
    ```
 
 2. **Bangun dan jalankan container Docker:**
