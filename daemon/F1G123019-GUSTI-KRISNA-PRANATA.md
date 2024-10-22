@@ -33,7 +33,7 @@ Selamat datang di proyek **Web App Daemon** yang menggunakan **Flask**! Proyek i
    cd web_app_daemon
    ```
 
-   ![Screenshot Buat Folder Proyek](/Users/gustikrisnapranata/ILMU KOMPUTER/SEMESTER 3/SISTEM OPERASI/ilkom23-os-kelompok-5/daemon/screenshot/1.png)
+   ![Screenshot Buat Folder Proyek](/daemon/screenshot/1.png)
 
 ### Langkah 2: Buat Virtual Environment
 
