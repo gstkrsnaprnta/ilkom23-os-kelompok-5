@@ -1,11 +1,10 @@
-Berikut adalah versi lengkap dari `README.md` dengan penambahan ikon dan kelanjutan isi yang Anda minta, semuanya dalam satu file:
-
-```markdown
-# 🚀 Web App Daemon with Flask
+# 🚀 Web App Daemon dengan Flask
 
 ![Flask](https://flask.palletsprojects.com/en/2.2.x/_images/flask-logo.png)
 
-Selamat datang di proyek Web App Daemon yang menggunakan Flask! Proyek ini menyajikan aplikasi web sebagai daemon di macOS, memungkinkan Anda untuk menjalankannya secara otomatis saat sistem dinyalakan.
+Selamat datang di proyek **Web App Daemon** yang menggunakan **Flask**! Proyek ini menyajikan aplikasi web sebagai daemon di macOS, memungkinkan Anda untuk menjalankannya secara otomatis saat sistem dinyalakan.
+
+---
 
 ## ✨ Fitur Unggulan
 
@@ -13,33 +12,104 @@ Selamat datang di proyek Web App Daemon yang menggunakan Flask! Proyek ini menya
 - **Otomatisasi**: Berjalan otomatis saat sistem mulai, berkat integrasi dengan LaunchDaemon.
 - **Kustomisasi Mudah**: Konfigurasi melalui file plist untuk penyesuaian sederhana.
 
+---
+
 ## 🛠️ Persyaratan
 
 - **macOS**
 - **Python 3**
 - **Flask**
 
+---
+
 ## 📦 Instalasi
 
-1. **Clone Repository**:
+### Langkah 1: Buat Folder Proyek
+
+1. Buka terminal Anda.
+2. Buat folder untuk proyek:
    ```bash
-   git clone https://github.com/username/repo-name.git
-   cd repo-name
+   mkdir web_app_daemon
+   cd web_app_daemon
    ```
 
-2. **Buat dan Aktifkan Virtual Environment**:
+   ![Screenshot Buat Folder Proyek](/Users/gustikrisnapranata/ILMU KOMPUTER/SEMESTER 3/SISTEM OPERASI/ilkom23-os-kelompok-5/daemon/screenshot/1.png)
+
+### Langkah 2: Buat Virtual Environment
+
+1. Buat virtual environment dengan perintah:
    ```bash
    python3 -m venv venv
+   ```
+
+2. Aktifkan virtual environment dengan perintah:
+   ```bash
    source venv/bin/activate
    ```
 
-3. **Instal Flask**:
+   ![Screenshot Virtual Environment](/Users/gustikrisnapranata/ILMU KOMPUTER/SEMESTER 3/SISTEM OPERASI/ilkom23-os-kelompok-5/daemon/screenshot/screenshot2.png)
+
+### Langkah 3: Instal Flask
+
+Instal Flask di dalam virtual environment dengan perintah:
+```bash
+pip install flask
+```
+
+![Screenshot Install Flask](/Users/gustikrisnapranata/ILMU KOMPUTTER/SEMESTER 3/SISTEM OPERASI/ilkom23-os-kelompok-5/daemon/screenshot/screenshot3.png)
+
+### Langkah 4: Buat File Aplikasi Flask
+
+1. Buat file baru bernama `app.py` di dalam folder proyek:
    ```bash
-   pip install flask
+   touch app.py
    ```
 
-4. **Buat File plist**:
-   Simpan file `com.gustikrisna.webapp.plist` di `~/Library/LaunchAgents/`:
+2. Buka `app.py` di editor teks dan tambahkan kode berikut:
+   ```python
+   from flask import Flask
+
+   app = Flask(__name__)
+
+   @app.route('/')
+   def home():
+       return "Hello, World! This is your Flask daemon."
+
+   if __name__ == "__main__":
+       app.run(host='0.0.0.0', port=5006)
+   ```
+
+   ![Screenshot Buat File Aplikasi Flask](/Users/gustikrisnapranata/ILMU KOMPUTER/SEMESTER 3/SISTEM OPERASI/ilkom23-os-kelompok-5/daemon/screenshot/screenshot4.png)
+
+### Langkah 5: Buat File Skrip `start_web.sh`
+
+1. Buat skrip shell bernama `start_web.sh` di direktori proyek Anda:
+   ```bash
+   touch start_web.sh
+   ```
+
+2. Buka `start_web.sh` di editor teks dan tambahkan baris berikut:
+   ```bash
+   #!/bin/bash
+   source venv/bin/activate
+   python app.py
+   ```
+
+3. Berikan izin eksekusi pada skrip dengan perintah:
+   ```bash
+   chmod +x start_web.sh
+   ```
+
+   ![Screenshot Create Shell Script](/Users/gustikrisnapranata/ILMU KOMPUTER/SEMESTER 3/SISTEM OPERASI/ilkom23-os-kelompok-5/daemon/screenshot/screenshot5.png)
+
+### Langkah 6: Buat File LaunchAgent plist
+
+1. Buat file plist bernama `com.gustikrisna.webapp.plist` di direktori `~/Library/LaunchAgents/`:
+   ```bash
+   touch ~/Library/LaunchAgents/com.gustikrisna.webapp.plist
+   ```
+
+2. Buka file plist di editor teks dan tambahkan konten berikut:
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -57,28 +127,35 @@ Selamat datang di proyek Web App Daemon yang menggunakan Flask! Proyek ini menya
    </plist>
    ```
 
-5. **Berikan Izin Eksekusi**:
-   ```bash
-   chmod +x /path/to/your/start_web.sh
-   ```
+3. Ganti `/path/to/your/start_web.sh` dengan path yang sebenarnya untuk skrip Anda.
 
-6. **Muat Daemon**:
-   ```bash
-   sudo launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.gustikrisna.webapp.plist
-   ```
+   ![Screenshot Create plist File](/Users/gustikrisnapranata/ILMU KOMPUTER/SEMESTER 3/SISTEM OPERASI/ilkom23-os-kelompok-5/daemon/screenshot/screenshot6.png)
 
-## 🌐 Menjalankan Aplikasi
+### Langkah 7: Muat LaunchAgent
 
-Setelah langkah-langkah di atas, aplikasi Anda siap diakses! Cukup buka browser dan kunjungi:
+Muat LaunchAgent untuk menjalankan daemon dengan perintah:
+```bash
+sudo launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.gustikrisna.webapp.plist
+```
+
+![Screenshot Load LaunchAgent](/Users/gustikrisnapranata/ILMU KOMPUTER/SEMESTER 3/SISTEM OPERASI/ilkom23-os-kelompok-5/daemon/screenshot/screenshot7.png)
+
+### Langkah 8: Akses Aplikasi Web Anda
+
+Setelah menyelesaikan langkah-langkah di atas, aplikasi Flask Anda harus sudah berjalan. Buka browser dan kunjungi:
 - [http://127.0.0.1:5006](http://127.0.0.1:5006)
 - [http://192.168.1.9:5006](http://192.168.1.9:5006) (sesuaikan dengan IP Anda)
 
-## 🐞 Debugging
+![Screenshot Access Web Application](/Users/gustikrisnapranata/ILMU KOMPUTER/SEMESTER 3/SISTEM OPERASI/ilkom23-os-kelompok-5/daemon/screenshot/screenshot8.png)
 
-Jika ada masalah, periksa log menggunakan:
+## 🐞 Pemecahan Masalah
+
+Jika Anda mengalami masalah, periksa log menggunakan:
 ```bash
 log show --predicate 'eventMessage contains "com.gustikrisna.webapp"' --info --last 1h
 ```
+
+---
 
 ## 🤝 Kontribusi
 
@@ -93,7 +170,4 @@ Proyek ini dilisensikan di bawah MIT License. Lihat file [LICENSE](LICENSE) untu
 Terima kasih telah menggunakan proyek ini! Semoga bermanfaat dan selamat berkoding! 🎉
 ```
 
-### Catatan
-- Pastikan untuk mengganti `https://github.com/username/repo-name.git` dengan URL repositori Anda yang sesuai.
-- Sesuaikan `/path/to/your/start_web.sh` dengan path yang benar untuk skrip Anda.
-- Anda dapat menambahkan ikon lain sesuai kebutuhan proyek Anda. Jika ada perubahan atau tambahan lain yang diinginkan, silakan beri tahu!
+Silakan pastikan untuk mengganti `/path/to/your/start_web.sh` dengan path yang sesuai untuk skrip Anda. Jika ada yang ingin ditambahkan atau diubah, beri tahu saya!
