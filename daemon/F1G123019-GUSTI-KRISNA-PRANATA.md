@@ -56,7 +56,7 @@ Instal Flask di dalam virtual environment dengan perintah:
 pip install flask
 ```
 
-![Screenshot Install Flask](/Users/gustikrisnapranata/ILMU KOMPUTTER/SEMESTER 3/SISTEM OPERASI/ilkom23-os-kelompok-5/daemon/screenshot/screenshot3.png)
+![Screenshot Buat Folder Proyek](/daemon/screenshot/tahap3.png)
 
 ### Langkah 4: Buat File Aplikasi Flask
 
@@ -79,7 +79,7 @@ pip install flask
        app.run(host='0.0.0.0', port=5006)  # Ganti port jika perlu
    ```
 
-   ![Screenshot Buat File Aplikasi Flask](/Users/gustikrisnapranata/ILMU KOMPUTER/SEMESTER 3/SISTEM OPERASI/ilkom23-os-kelompok-5/daemon/screenshot/screenshot4.png)
+   ![Screenshot Buat Folder Proyek](/daemon/screenshot/tahap4.png)
 
 ### Langkah 5: Buat File Skrip `start_web.sh`
 
@@ -100,8 +100,7 @@ pip install flask
    chmod +x start_web.sh
    ```
 
-   ![Screenshot Create Shell Script](/Users/gustikrisnapranata/ILMU KOMPUTER/SEMESTER 3/SISTEM OPERASI/ilkom23-os-kelompok-5/daemon/screenshot/screenshot5.png)
-
+   ![Screenshot Buat Folder Proyek](/daemon/screenshot/tahap5.png)
 ### Langkah 6: Buat File LaunchAgent plist
 
 1. Buat file plist bernama `com.belajardaemon.webapp.plist di direktori `~/Library/LaunchAgents/`:
@@ -129,7 +128,7 @@ pip install flask
 
 3. Ganti `/path/to/your/start_web.sh` dengan path yang sebenarnya untuk skrip Anda.
 
-   ![Screenshot Create plist File](/Users/gustikrisnapranata/ILMU KOMPUTER/SEMESTER 3/SISTEM OPERASI/ilkom23-os-kelompok-5/daemon/screenshot/screenshot6.png)
+   ![Screenshot Buat Folder Proyek](/daemon/screenshot/tahap6.png)
 
 ### Langkah 7: Muat LaunchAgent
 
@@ -146,7 +145,7 @@ Setelah menyelesaikan langkah-langkah di atas, aplikasi Flask Anda harus sudah b
 - [http://127.0.0.1:5006](http://127.0.0.1:5006)
 - [http://192.168.1.9:5006](http://192.168.1.9:5006) (sesuaikan dengan IP Anda)
 
-![Screenshot Access Web Application](/Users/gustikrisnapranata/ILMU KOMPUTER/SEMESTER 3/SISTEM OPERASI/ilkom23-os-kelompok-5/daemon/screenshot/screenshot8.png)
+![Screenshot Buat Folder Proyek](/daemon/screenshot/tahap9.png)
 
 ## 🐞 Pemecahan Masalah
 
