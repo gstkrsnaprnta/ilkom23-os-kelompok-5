@@ -33,7 +33,7 @@ Selamat datang di proyek **Web App Daemon** yang menggunakan **Flask**! Proyek i
    cd web_app_daemon
    ```
 
-   ![Screenshot Buat Folder Proyek](/daemon/screenshot/1.png)
+   ![Screenshot Buat Folder Proyek](/daemon/screenshot/tahap1.png)
 
 ### Langkah 2: Buat Virtual Environment
 
@@ -47,7 +47,7 @@ Selamat datang di proyek **Web App Daemon** yang menggunakan **Flask**! Proyek i
    source venv/bin/activate
    ```
 
-   ![Screenshot Virtual Environment](/Users/gustikrisnapranata/ILMU KOMPUTER/SEMESTER 3/SISTEM OPERASI/ilkom23-os-kelompok-5/daemon/screenshot/screenshot2.png)
+   ![Screenshot Buat Folder Proyek](/daemon/screenshot/tahap2.png)
 
 ### Langkah 3: Instal Flask
 
@@ -76,7 +76,7 @@ pip install flask
        return "Hello, World! This is your Flask daemon."
 
    if __name__ == "__main__":
-       app.run(host='0.0.0.0', port=5006)
+       app.run(host='0.0.0.0', port=5006)  # Ganti port jika perlu
    ```
 
    ![Screenshot Buat File Aplikasi Flask](/Users/gustikrisnapranata/ILMU KOMPUTER/SEMESTER 3/SISTEM OPERASI/ilkom23-os-kelompok-5/daemon/screenshot/screenshot4.png)
@@ -107,7 +107,6 @@ pip install flask
 1. Buat file plist bernama `com.belajardaemon.webapp.plist di direktori `~/Library/LaunchAgents/`:
    ```bash
    touch ~/Library/LaunchAgents/com.belajardaemon.webapp.plist
-
    ```
 
 2. Buka file plist di editor teks dan tambahkan konten berikut:
@@ -156,6 +155,21 @@ Jika Anda mengalami masalah, periksa log menggunakan:
 log show --predicate 'eventMessage contains "com.gustikrisna.webapp"' --info --last 1h
 ```
 
+### 🔧 Tips dan Trik
+
+- **Port Sudah Digunakan**: Jika Anda menerima pesan bahwa port yang ditentukan sudah digunakan (seperti 5008), periksa proses yang berjalan dengan:
+  ```bash
+  lsof -i :5008
+  ```
+  Hentikan proses yang ada jika perlu atau ubah port di `app.py`.
+
+- **Perizinan Skrip**: Pastikan skrip `start_web.sh` memiliki izin eksekusi. Gunakan:
+  ```bash
+  chmod +x start_web.sh
+  ```
+
+- **Menggunakan Virtual Environment**: Pastikan untuk selalu mengaktifkan virtual environment sebelum menjalankan aplikasi Flask Anda. Jika Anda melihat pesan bahwa Python tidak dapat menemukan file, pastikan Anda berada di dalam virtual environment.
+
 ---
 
 ## 🤝 Kontribusi
@@ -171,4 +185,6 @@ Proyek ini dilisensikan di bawah MIT License. Lihat file [LICENSE](LICENSE) untu
 Terima kasih telah menggunakan proyek ini! Semoga bermanfaat dan selamat berkoding! 🎉
 ```
 
-Silakan pastikan untuk mengganti `/path/to/your/start_web.sh` dengan path yang sesuai untuk skrip Anda. Jika ada yang ingin ditambahkan atau diubah, beri tahu saya!
+### Catatan:
+1. Pastikan untuk mengganti path pada bagian `com.belajardaemon.webapp.plist` dengan path yang benar untuk skrip `start_web.sh`.
+2. Saya juga menambahkan beberapa tips dan trik untuk pemecahan masalah yang mungkin Anda temui selama proses pengembangan. Jika ada hal lain yang ingin Anda tambahkan atau ubah, silakan beri tahu!
