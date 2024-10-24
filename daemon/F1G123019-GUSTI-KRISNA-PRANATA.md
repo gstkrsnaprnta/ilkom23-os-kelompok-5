@@ -104,9 +104,10 @@ pip install flask
 
 ### Langkah 6: Buat File LaunchAgent plist
 
-1. Buat file plist bernama `com.gustikrisna.webapp.plist` di direktori `~/Library/LaunchAgents/`:
+1. Buat file plist bernama `com.belajardaemon.webapp.plist di direktori `~/Library/LaunchAgents/`:
    ```bash
-   touch ~/Library/LaunchAgents/com.gustikrisna.webapp.plist
+   touch ~/Library/LaunchAgents/com.belajardaemon.webapp.plist
+
    ```
 
 2. Buka file plist di editor teks dan tambahkan konten berikut:
@@ -135,7 +136,7 @@ pip install flask
 
 Muat LaunchAgent untuk menjalankan daemon dengan perintah:
 ```bash
-sudo launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.gustikrisna.webapp.plist
+sudo launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.belajardaemon.webapp.plist
 ```
 
 ![Screenshot Load LaunchAgent](/Users/gustikrisnapranata/ILMU KOMPUTER/SEMESTER 3/SISTEM OPERASI/ilkom23-os-kelompok-5/daemon/screenshot/screenshot7.png)
