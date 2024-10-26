@@ -115,7 +115,7 @@ Jika layanan tidak berjalan sebagaimana mestinya, Anda bisa memeriksa error di l
    ```
 
    **📸 Contoh Bukti Layanan Berjalan**:  
-   ![Bukti](daemon/screenshot/F1G123019-GUSTI-KRISNA-PRANATA.png)
+   ![Bukti](daemon/Screenshot/F1G123019-GUSTI-KRISNA-PRANATA.png)
 
 ```
 
