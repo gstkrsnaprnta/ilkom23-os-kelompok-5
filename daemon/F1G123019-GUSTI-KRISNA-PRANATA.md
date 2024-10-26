@@ -114,10 +114,17 @@ Jika layanan tidak berjalan sebagaimana mestinya, Anda bisa memeriksa error di l
    sudo journalctl -u flaskapp.service -f
    ```
 
-   **📸 Contoh Bukti Layanan Berjalan**: Sertakan screenshot dari hasil output perintah di atas (`sudo journalctl -u flaskapp.service -f`) sebagai bukti bahwa layanan berjalan.
-![Bukti Layanan Berjalan]daemon/Screenshot/F1G123019-GUSTI-KRISNA-PRANATA)
----
+   **📸 Contoh Bukti Layanan Berjalan**:  
+   ![Bukti Layanan Berjalan](daemon/Screenshot/F1G123019-GUSTI-KRISNA-PRANATA)
+```
 
+Pastikan path `daemon/Screenshot/F1G123019-GUSTI-KRISNA-PRANATA` menunjuk ke file gambar yang valid, seperti `F1G123019-GUSTI-KRISNA-PRANATA.png`. Jika file tersebut berformat `.png`, tambahkan ekstensinya seperti berikut:
+
+```markdown
+   ![Bukti Layanan Berjalan](daemon/Screenshot/F1G123019-GUSTI-KRISNA-PRANATA.png)
+```
+
+Dengan cara ini, Markdown akan menampilkan gambar saat Anda melakukan preview atau melihat file tersebut di platform seperti GitHub.
 ## 🎉 Kesimpulan
 Dengan mengikuti langkah-langkah di atas, Anda telah berhasil membuat dan mengelola layanan Flask menggunakan `systemd` di Kali Linux. Pastikan untuk memeriksa log dan status layanan secara berkala untuk menjaga stabilitas aplikasi Anda.
 ```
