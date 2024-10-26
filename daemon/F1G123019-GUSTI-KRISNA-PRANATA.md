@@ -115,7 +115,8 @@ Jika layanan tidak berjalan sebagaimana mestinya, Anda bisa memeriksa error di l
    ```
 
    **📸 Contoh Bukti Layanan Berjalan**:  
-   ![Bukti Layanan Berjalan](daemon/screenshot/F1G123019-GUSTI-KRISNA-PRANATA.png)
+   ![Bukti](daemon/screenshot/F1G123019-GUSTI-KRISNA-PRANATA.png)
+
 ```
 
 Dengan cara ini, Markdown akan menampilkan gambar saat Anda melakukan preview atau melihat file tersebut di platform seperti GitHub.
