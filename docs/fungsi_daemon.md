@@ -1,0 +1,1 @@
+Fungsi daemon adalah untuk menjalankan proses di latar belakang tanpa interaksi langsung dengan pengguna. Proses ini sering digunakan untuk menyediakan layanan atau fungsi tertentu pada sistem operasi, seperti pemantauan, pemrosesan data, atau pengelolaan sumber daya.
