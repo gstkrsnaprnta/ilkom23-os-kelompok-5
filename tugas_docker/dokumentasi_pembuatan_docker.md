@@ -398,3 +398,181 @@ Selamat! Anda telah berhasil membuat aplikasi **FastAPI** dengan **web interface
 - **Langkah-langkah**: Menjelaskan dari awal pembuatan proyek hingga aplikasi berjalan di browser dengan Docker.
 
 Dengan langkah-langkah di atas, Anda bisa membuat aplikasi web menggunakan FastAPI dengan antarmuka pengguna yang dapat diakses melalui browser dan dikemas dengan Docker.
+
+Berikut adalah penambahan untuk dokumentasi terkait **Fase Bedah Container** dan **Optimasi Resources** :
+
+---
+
+Berikut adalah lanjutan dari tutorial Anda dengan langkah-langkah terkait **Bedah Container**, serta **Optimasi Resources** dalam konteks aplikasi FastAPI yang berjalan dalam container Docker. Semua proses dilakukan melalui terminal, dan saya akan sertakan instruksi terkait screenshot pada setiap langkah.
+
+# 📚 Tutorial: Bedah Container dan Optimasi Resources pada Docker untuk Aplikasi FastAPI
+
+---
+
+## 🔍 Langkah 1: Melihat Container yang Berjalan
+
+Setelah Anda berhasil menjalankan aplikasi FastAPI dalam container, periksa container yang sedang berjalan dengan perintah:
+
+```bash
+docker ps
+```
+
+Outputnya akan menunjukkan daftar container yang aktif, seperti ini:
+
+```
+CONTAINER ID   IMAGE             COMMAND                  CREATED          STATUS          PORTS                    NAMES
+ebf10abca6b6   fastapi-web-app   "uvicorn main:app --…"   20 minutes ago   Up 20 minutes   0.0.0.0:8000->8000/tcp   epic_johnson
+```
+
+Gambar output `docker ps`:
+![docker ps output](images/docker_ps_output.png)
+
+---
+
+## 🛠️ Langkah 2: Mengakses Shell di dalam Container
+
+Untuk melihat lebih dalam tentang container, Anda dapat masuk ke dalam container menggunakan perintah berikut:
+
+```bash
+docker exec -it epic_johnson /bin/bash
+```
+
+Ini akan membawa Anda ke dalam shell dari container yang bernama `epic_johnson`.
+
+Gambar tampilan shell dalam container:
+![Shell di dalam Container](images/shell_in_container.png)
+
+---
+
+## 🗂️ Langkah 3: Bedah Struktur File dalam Container
+
+Sekarang Anda berada di dalam shell container, Anda bisa menjalankan berbagai perintah untuk menjelajahi sistem file container. Misalnya, periksa direktori kerja container dengan perintah:
+
+```bash
+ls /app
+```
+
+Gambar hasil perintah `ls` di dalam container:
+![Struktur File dalam Container](images/container_ls_app.png)
+
+---
+
+## 🖥️ Langkah 4: Memeriksa Sistem Operasi Container
+
+Untuk melihat informasi sistem operasi yang digunakan dalam container, jalankan perintah:
+
+```bash
+cat /etc/os-release
+```
+
+Outputnya akan menunjukkan informasi tentang sistem operasi container, seperti ini:
+
+```
+NAME="Debian"
+VERSION="10 (Buster)"
+```
+
+Gambar output perintah `cat /etc/os-release`:
+![OS Release di Container](images/os_release_output.png)
+
+---
+
+## 🛠️ Langkah 5: Memeriksa Daftar Proses yang Berjalan dalam Container
+
+Untuk melihat proses yang berjalan dalam container, gunakan perintah:
+
+```bash
+ps aux
+```
+
+Gambar daftar proses dalam container:
+![Daftar Proses Container](images/ps_aux_output.png)
+
+---
+
+## ⚙️ Langkah 6: Melihat Resource yang Digunakan oleh Container
+
+Untuk memonitor penggunaan sumber daya (CPU, memori, dll) dalam container, gunakan perintah:
+
+```bash
+docker stats epic_johnson
+```
+
+Outputnya akan menampilkan penggunaan resource, seperti berikut:
+
+```
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     NET I/O       BLOCK I/O
+ebf10abca6b6   epic_johnson   0.03%     15.3MiB / 2GiB        2.53kB / 0B   0B / 0B
+```
+
+Gambar output perintah `docker stats`:
+![Docker Stats](images/docker_stats.png)
+
+---
+
+## ⚡ Langkah 7: Optimasi Resources untuk Container
+
+Untuk melakukan optimasi resource, Anda bisa mengatur batasan pada CPU dan memori yang digunakan oleh container saat menjalankan aplikasi. Berikut adalah cara untuk melakukan optimasi:
+
+### 1. **Batasan Memori**
+
+Saat menjalankan container, Anda bisa menggunakan opsi `--memory` untuk membatasi penggunaan memori, contohnya:
+
+```bash
+docker run -d -p 8000:8000 --memory="512m" fastapi-web-app
+```
+
+Perintah ini akan membatasi penggunaan memori container menjadi 512 MB.
+
+Gambar output penggunaan memori:
+![Memori Container](images/memory_optimized.png)
+
+### 2. **Batasan CPU**
+
+Untuk membatasi CPU, Anda bisa menggunakan opsi `--cpus`, seperti berikut:
+
+```bash
+docker run -d -p 8000:8000 --cpus="1.0" fastapi-web-app
+```
+
+Perintah ini akan membatasi penggunaan CPU menjadi satu core.
+
+Gambar pengaturan CPU:
+![Pengaturan CPU Container](images/cpu_optimized.png)
+
+---
+
+## 🌍 Langkah 8: Mengakses Aplikasi Setelah Optimasi
+
+Setelah optimasi resource, Anda bisa mengakses aplikasi FastAPI seperti sebelumnya melalui browser di alamat berikut:
+
+```
+http://127.0.0.1:8000
+```
+
+Gambar tampilan aplikasi di browser:
+![Tampilan Browser](images/browser_optimized.png)
+
+---
+
+## 🎉 Selesai!
+
+Selamat, Anda telah berhasil melakukan bedah container untuk aplikasi FastAPI Anda dan menerapkan optimasi resources untuk meningkatkan performa aplikasi Anda di dalam Docker container.
+
+---
+
+## 📌 Referensi
+
+- [Docker Documentation](https://docs.docker.com/)
+- [FastAPI Documentation](https://fastapi.tiangolo.com/)
+- [Jinja2 Documentation](https://jinja.palletsprojects.com/)
+
+```
+
+### Penjelasan Tambahan:
+
+- **Langkah-langkah Bedah Container**: Anda dapat memeriksa isi container dan berbagai informasi sistem menggunakan perintah seperti `docker ps`, `ls`, dan `cat /etc/os-release`.
+- **Optimasi Resources**: Anda dapat mengoptimalkan penggunaan CPU dan memori container dengan menggunakan opsi `--memory` dan `--cpus` saat menjalankan container.
+- **Screenshot**: Pada setiap langkah, Anda akan menyertakan screenshot yang sesuai, simpan gambar tersebut di folder `images` dengan nama yang sesuai dengan instruksi. 
+
+Dokumentasi ini akan memberikan gambaran menyeluruh tentang cara berinteraksi dengan container dan mengoptimalkannya di Docker.
