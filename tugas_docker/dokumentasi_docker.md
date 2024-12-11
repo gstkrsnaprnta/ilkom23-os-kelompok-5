@@ -65,11 +65,118 @@ Tutorial ini akan membawa Anda melalui langkah-langkah untuk membuat aplikasi **
    
    ![Kode dalam main.py](screenshot/code_mainpy_nano.png)
    
-```
+---
 
-Dengan langkah ini, Anda telah berhasil membuat dan mengedit file `main.py` menggunakan **nano** di terminal. Jangan lupa untuk melanjutkan ke langkah berikutnya setelah file tersebut disiapkan.
+### 🌐 Langkah 3: Menyiapkan Struktur Folder Template
 
-=
+1. **Buat folder `templates/`** untuk menyimpan file HTML:
+
+   ```bash
+   mkdir templates
+   ```
+
+2. **Buat file `home.html`** di dalam folder `templates/`:
+
+   ```bash
+   touch templates/home.html
+   ```
+
+3. **Buka file `home.html`** dengan **nano** untuk mengeditnya:
+
+   ```bash
+   nano templates/home.html
+   ```
+
+4. **Isi `home.html`** dengan HTML berikut:
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Welcome to FastAPI Web</title>
+       <style>
+           body {
+               font-family: Arial, sans-serif;
+               text-align: center;
+               margin-top: 50px;
+           }
+           h1 {
+               color: #3498db;
+           }
+           p {
+               font-size: 18px;
+           }
+       </style>
+   </head>
+   <body>
+       <h1>Welcome to FastAPI Web!</h1>
+       <p>This is a simple web app served by FastAPI.</p>
+       <a href="/about">Go to About Page</a>
+   </body>
+   </html>
+   ```
+
+5. **Simpan dan keluar** dari **nano**:
+   - Tekan `Ctrl + O` untuk menyimpan file.
+   - Tekan `Enter` untuk mengonfirmasi nama file.
+   - Tekan `Ctrl + X` untuk keluar dari **nano**.
+
+   Gambar file `home.html` setelah selesai diubah:
+
+   ![Home Page Template](screenshot/home_page_template.png)
+
+6. **Buat file `about.html`** untuk halaman "About" di dalam folder `templates/`:
+
+   ```bash
+   touch templates/about.html
+   ```
+
+7. **Buka file `about.html`** dengan **nano** untuk mengeditnya:
+
+   ```bash
+   nano templates/about.html
+   ```
+
+8. **Isi `about.html`** dengan HTML berikut:
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>About - FastAPI Web</title>
+       <style>
+           body {
+               font-family: Arial, sans-serif;
+               text-align: center;
+               margin-top: 50px;
+           }
+           h1 {
+               color: #e74c3c;
+           }
+           p {
+               font-size: 18px;
+           }
+       </style>
+   </head>
+   <body>
+       <h1>About This FastAPI Web App</h1>
+       <p>This web app is created using FastAPI and serves dynamic HTML pages with Jinja2 templates.</p>
+       <a href="/">Go to Home Page</a>
+   </body>
+   </html>
+   ```
+
+9. **Simpan dan keluar** dari **nano**.
+
+   Gambar file `about.html` setelah selesai diubah:
+
+   ![About Page Template](screenshot/about_page_template.png)
+
+Dengan langkah ini, Anda telah berhasil menyiapkan folder `templates/` dan membuat file template HTML untuk halaman utama dan halaman about. Anda sekarang siap untuk menjalankan aplikasi FastAPI!
 
 ### 🌐 Langkah 3: Menyiapkan Struktur Folder Template
 
