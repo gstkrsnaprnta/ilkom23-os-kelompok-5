@@ -425,7 +425,7 @@ ebf10abca6b6   fastapi-web-app   "uvicorn main:app --…"   20 minutes ago   Up 
 ```
 
 Gambar output `docker ps`:
-![docker ps output](screenschot/docker_ps_output.png)
+![docker ps output](screenshot/docker_ps_output.png)
 
 ---
 
