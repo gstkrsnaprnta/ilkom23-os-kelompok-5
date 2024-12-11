@@ -509,7 +509,7 @@ Untuk melakukan optimasi resource, Anda bisa mengatur batasan pada CPU dan memor
 Saat menjalankan container, Anda bisa menggunakan opsi `--memory` untuk membatasi penggunaan memori, contohnya:
 
 ```bash
-docker run -d -p 8000:8000 --memory="512m" fastapi-web-app
+docker run -d -p 8000:8000 --memory="512m" --name fastapi_container fastapi-web-app
 ```
 
 Perintah ini akan membatasi penggunaan memori container menjadi 512 MB.
@@ -522,7 +522,7 @@ Gambar output penggunaan memori:
 Untuk membatasi CPU, Anda bisa menggunakan opsi `--cpus`, seperti berikut:
 
 ```bash
-docker run -d -p 8000:8000 --cpus="1.0" fastapi-web-app
+docker run -d -p 8000:8000 --cpus="1.0" --name fastapi_container fastapi-web-app
 ```
 
 Perintah ini akan membatasi penggunaan CPU menjadi satu core.
