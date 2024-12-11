@@ -392,10 +392,9 @@ Selamat! Anda telah berhasil membuat aplikasi **FastAPI** dengan **web interface
 - [Docker Documentation](https://docs.docker.com/)
 - [Jinja2 Documentation](https://jinja.palletsprojects.com/)
 
-```
+---
 
 ### Penjelasan
 - **Langkah-langkah**: Menjelaskan dari awal pembuatan proyek hingga aplikasi berjalan di browser dengan Docker.
-- **Screenshot**: Ditempatkan setelah setiap langkah untuk memperjelas proses. Pastikan Anda menyimpan gambar di folder `screenshot` dan menyesuaikan nama file gambar sesuai dengan screenshot yang diambil.
-  
+
 Dengan langkah-langkah di atas, Anda bisa membuat aplikasi web menggunakan FastAPI dengan antarmuka pengguna yang dapat diakses melalui browser dan dikemas dengan Docker.
