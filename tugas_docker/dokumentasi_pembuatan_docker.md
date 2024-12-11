@@ -496,7 +496,7 @@ docker stats fastapi_container
 Outputnya akan menampilkan penggunaan resource, seperti berikut:
 
 Gambar output perintah `docker stats`:
-![Docker Stats](screenshot/docker_stats.png)
+![Docker Stats](screenshot/docker_statss.png)
 
 ---
 
