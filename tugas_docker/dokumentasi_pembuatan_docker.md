@@ -440,7 +440,7 @@ docker exec -it epic_johnson /bin/bash
 Ini akan membawa Anda ke dalam shell dari container yang bernama `epic_johnson`.
 
 Gambar tampilan shell dalam container:
-![Shell di dalam Container](images/shell_in_container.png)
+![Shell di dalam Container](screenshot/shell_in_container.png)
 
 ---
 
@@ -453,7 +453,7 @@ ls /app
 ```
 
 Gambar hasil perintah `ls` di dalam container:
-![Struktur File dalam Container](images/container_ls_app.png)
+![Struktur File dalam Container](screenshot/container_ls_app.png)
 
 ---
 
@@ -473,7 +473,7 @@ VERSION="10 (Buster)"
 ```
 
 Gambar output perintah `cat /etc/os-release`:
-![OS Release di Container](images/os_release_output.png)
+![OS Release di Container](screenshot/os_release_output.png)
 
 ---
 
@@ -486,7 +486,7 @@ ps aux
 ```
 
 Gambar daftar proses dalam container:
-![Daftar Proses Container](images/ps_aux_output.png)
+![Daftar Proses Container](screenshot/ps_aux_output.png)
 
 ---
 
@@ -506,7 +506,7 @@ ebf10abca6b6   epic_johnson   0.03%     15.3MiB / 2GiB        2.53kB / 0B   0B /
 ```
 
 Gambar output perintah `docker stats`:
-![Docker Stats](images/docker_stats.png)
+![Docker Stats](screenshot/docker_stats.png)
 
 ---
 
@@ -525,7 +525,7 @@ docker run -d -p 8000:8000 --memory="512m" fastapi-web-app
 Perintah ini akan membatasi penggunaan memori container menjadi 512 MB.
 
 Gambar output penggunaan memori:
-![Memori Container](images/memory_optimized.png)
+![Memori Container](screenshot/memory_optimized.png)
 
 ### 2. **Batasan CPU**
 
@@ -538,7 +538,7 @@ docker run -d -p 8000:8000 --cpus="1.0" fastapi-web-app
 Perintah ini akan membatasi penggunaan CPU menjadi satu core.
 
 Gambar pengaturan CPU:
-![Pengaturan CPU Container](images/cpu_optimized.png)
+![Pengaturan CPU Container](screenshot/cpu_optimized.png)
 
 ---
 
@@ -551,7 +551,7 @@ http://127.0.0.1:8000
 ```
 
 Gambar tampilan aplikasi di browser:
-![Tampilan Browser](images/browser_optimized.png)
+![Tampilan Browser](screenshot/browser_optimized.png)
 
 ---
 
