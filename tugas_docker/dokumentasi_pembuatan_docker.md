@@ -435,7 +435,7 @@ docker exec -it fastapi_container /bin/bash
 Ini akan membawa Anda ke dalam shell dari container yang bernama `fastapi_container`.
 
 Gambar tampilan shell dalam container:
-![Shell di dalam Container](screenshot/shell_in_container.png)
+![Shell di dalam Container](screenshot/shell_in_containers.png)
 
 ---
 
