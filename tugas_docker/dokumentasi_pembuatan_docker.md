@@ -419,11 +419,6 @@ docker ps
 
 Outputnya akan menunjukkan daftar container yang aktif, seperti ini:
 
-```
-CONTAINER ID   IMAGE             COMMAND                  CREATED          STATUS          PORTS                    NAMES
-ebf10abca6b6   fastapi-web-app   "uvicorn main:app --…"   20 minutes ago   Up 20 minutes   0.0.0.0:8000->8000/tcp   epic_johnson
-```
-
 Gambar output `docker ps`:
 ![docker ps output](screenshot/docker_ps_output.png)
 
@@ -434,10 +429,10 @@ Gambar output `docker ps`:
 Untuk melihat lebih dalam tentang container, Anda dapat masuk ke dalam container menggunakan perintah berikut:
 
 ```bash
-docker exec -it epic_johnson /bin/bash
+docker exec -it fastapi_container /bin/bash
 ```
 
-Ini akan membawa Anda ke dalam shell dari container yang bernama `epic_johnson`.
+Ini akan membawa Anda ke dalam shell dari container yang bernama `fastapi_container`.
 
 Gambar tampilan shell dalam container:
 ![Shell di dalam Container](screenshot/shell_in_container.png)
@@ -495,15 +490,10 @@ Gambar daftar proses dalam container:
 Untuk memonitor penggunaan sumber daya (CPU, memori, dll) dalam container, gunakan perintah:
 
 ```bash
-docker stats epic_johnson
+docker stats fastapi_container
 ```
 
 Outputnya akan menampilkan penggunaan resource, seperti berikut:
-
-```
-CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     NET I/O       BLOCK I/O
-ebf10abca6b6   epic_johnson   0.03%     15.3MiB / 2GiB        2.53kB / 0B   0B / 0B
-```
 
 Gambar output perintah `docker stats`:
 ![Docker Stats](screenshot/docker_stats.png)
