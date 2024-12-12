@@ -394,15 +394,6 @@ Selamat! Anda telah berhasil membuat aplikasi **FastAPI** dengan **web interface
 
 ---
 
-### Penjelasan
-- **Langkah-langkah**: Menjelaskan dari awal pembuatan proyek hingga aplikasi berjalan di browser dengan Docker.
-
-Dengan langkah-langkah di atas, Anda bisa membuat aplikasi web menggunakan FastAPI dengan antarmuka pengguna yang dapat diakses melalui browser dan dikemas dengan Docker.
-
-Berikut adalah penambahan untuk dokumentasi terkait **Fase Bedah Container** dan **Optimasi Resources** :
-
----
-
 Berikut adalah lanjutan dari tutorial Anda dengan langkah-langkah terkait **Bedah Container**, serta **Optimasi Resources** dalam konteks aplikasi FastAPI yang berjalan dalam container Docker. Semua proses dilakukan melalui terminal, dan saya akan sertakan instruksi terkait screenshot pada setiap langkah.
 
 # 📚 Tutorial: Bedah Container dan Optimasi Resources pada Docker untuk Aplikasi FastAPI
