@@ -296,6 +296,8 @@ Dengan langkah ini, Anda telah berhasil menyiapkan folder `templates/` dan membu
 
 Dengan langkah ini, Anda telah berhasil menambahkan Dockerfile dan file `requirements.txt` yang diperlukan untuk menjalankan aplikasi FastAPI di dalam container Docker. Anda kini dapat melanjutkan dengan membangun dan menjalankan Docker container untuk aplikasi Anda!
 
+---
+
 ### 🐳 Langkah 6: Menambahkan Docker untuk Menjalankan Aplikasi
 
 1. **Buat file `Dockerfile`** untuk aplikasi FastAPI:
