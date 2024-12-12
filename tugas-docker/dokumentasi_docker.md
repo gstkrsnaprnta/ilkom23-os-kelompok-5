@@ -375,3 +375,16 @@ Gambar tampilan shell dalam container:
 ![Shell di dalam Container](screenshot/shell_in_containers.png)
 
 ---
+
+## 🗂️ Langkah 3: Bedah Struktur File dalam Container
+
+Sekarang Anda berada di dalam shell container, Anda bisa menjalankan berbagai perintah untuk menjelajahi sistem file container. Misalnya, periksa direktori kerja container dengan perintah:
+
+```bash
+ls /app
+```
+
+Gambar hasil perintah `ls` di dalam container:
+![Struktur File dalam Container](screenshot/container_ls_app.png)
+
+---
