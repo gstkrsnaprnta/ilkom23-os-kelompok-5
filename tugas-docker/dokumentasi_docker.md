@@ -225,3 +225,73 @@ Dengan langkah ini, Anda telah berhasil menyiapkan folder `templates/` dan membu
      ![About Page in Browser](screenshot/about_page.png)
 
 ---
+
+### 🐳 Langkah 6: Menambahkan Docker untuk Menjalankan Aplikasi
+
+1. **Buat file `Dockerfile`** untuk aplikasi FastAPI:
+
+   ```bash
+   touch Dockerfile
+   ```
+
+2. **Buka file `Dockerfile`** dengan **nano**:
+
+   ```bash
+   nano Dockerfile
+   ```
+
+3. **Isi `Dockerfile`** dengan kode berikut:
+
+   ```dockerfile
+   FROM python:3.9
+
+   WORKDIR /app
+
+   COPY . .
+
+   RUN pip install --no-cache-dir -r requirements.txt
+
+   CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+   ```
+
+4. **Simpan dan keluar** dari **nano**:
+   - Tekan `Ctrl + O` untuk menyimpan file.
+   - Tekan `Enter` untuk mengonfirmasi nama file.
+   - Tekan `Ctrl + X` untuk keluar dari **nano**.
+
+   Gambar `Dockerfile` setelah selesai:
+
+   ![Dockerfile](screenshot/dockerfile.png)
+
+5. **Buat file `requirements.txt`** untuk menyimpan dependensi aplikasi:
+
+   ```bash
+   touch requirements.txt
+   ```
+
+6. **Buka file `requirements.txt`** dengan **nano**:
+
+   ```bash
+   nano requirements.txt
+   ```
+
+7. **Isi `requirements.txt`** dengan dependensi yang diperlukan:
+
+   ```txt
+   fastapi
+   uvicorn
+   jinja2
+   ```
+
+8. **Simpan dan keluar** dari **nano**:
+   - Tekan `Ctrl + O` untuk menyimpan file.
+   - Tekan `Enter` untuk mengonfirmasi nama file.
+   - Tekan `Ctrl + X` untuk keluar dari **nano**.
+
+   Gambar `requirements.txt` setelah selesai:
+
+   ![requirements.txt](screenshot/requirements_txt.png)
+
+Dengan langkah ini, Anda telah berhasil menambahkan Dockerfile dan file `requirements.txt` yang diperlukan untuk menjalankan aplikasi FastAPI di dalam container Docker. Anda kini dapat melanjutkan dengan membangun dan menjalankan Docker container untuk aplikasi Anda!
+
+---
