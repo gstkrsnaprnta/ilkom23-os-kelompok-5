@@ -532,19 +532,6 @@ Gambar pengaturan CPU:
 
 ---
 
-## 🌍 Langkah 8: Mengakses Aplikasi Setelah Optimasi
-
-Setelah optimasi resource, Anda bisa mengakses aplikasi FastAPI seperti sebelumnya melalui browser di alamat berikut:
-
-```
-http://127.0.0.1:8000
-```
-
-Gambar tampilan aplikasi di browser:
-![Tampilan Browser](screenshot/browser_optimized.png)
-
----
-
 ## 🎉 Selesai!
 
 Selamat, Anda telah berhasil melakukan bedah container untuk aplikasi FastAPI Anda dan menerapkan optimasi resources untuk meningkatkan performa aplikasi Anda di dalam Docker container.
@@ -558,11 +545,3 @@ Selamat, Anda telah berhasil melakukan bedah container untuk aplikasi FastAPI An
 - [Jinja2 Documentation](https://jinja.palletsprojects.com/)
 
 ```
-
-### Penjelasan Tambahan:
-
-- **Langkah-langkah Bedah Container**: Anda dapat memeriksa isi container dan berbagai informasi sistem menggunakan perintah seperti `docker ps`, `ls`, dan `cat /etc/os-release`.
-- **Optimasi Resources**: Anda dapat mengoptimalkan penggunaan CPU dan memori container dengan menggunakan opsi `--memory` dan `--cpus` saat menjalankan container.
-- **Screenshot**: Pada setiap langkah, Anda akan menyertakan screenshot yang sesuai, simpan gambar tersebut di folder `images` dengan nama yang sesuai dengan instruksi. 
-
-Dokumentasi ini akan memberikan gambaran menyeluruh tentang cara berinteraksi dengan container dan mengoptimalkannya di Docker.
