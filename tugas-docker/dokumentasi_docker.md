@@ -339,3 +339,24 @@ Dengan langkah ini, Anda telah berhasil menambahkan Dockerfile dan file `require
 Selamat! Anda telah berhasil membuat aplikasi **FastAPI** dengan **web interface** menggunakan **Jinja2** dan menjalankannya di dalam **Docker container**. Anda sekarang dapat mengembangkan aplikasi lebih lanjut dengan menambahkan lebih banyak fitur atau tampilan sesuai kebutuhan.
 
 ---
+
+Berikut adalah lanjutan dari tutorial Anda dengan langkah-langkah terkait **Bedah Container**, serta **Optimasi Resources** dalam konteks aplikasi FastAPI yang berjalan dalam container Docker. Semua proses dilakukan melalui terminal, dan saya akan sertakan instruksi terkait screenshot pada setiap langkah.
+
+# 📚 Tutorial: Bedah Container dan Optimasi Resources pada Docker untuk Aplikasi FastAPI
+
+---
+
+## 🔍 Langkah 1: Melihat Container yang Berjalan
+
+Setelah Anda berhasil menjalankan aplikasi FastAPI dalam container, periksa container yang sedang berjalan dengan perintah:
+
+```bash
+docker ps
+```
+
+Outputnya akan menunjukkan daftar container yang aktif, seperti ini:
+
+Gambar output `docker ps`:
+![docker ps output](screenshot/docker_ps_output.png)
+
+---
