@@ -421,3 +421,18 @@ Gambar daftar proses dalam container:
 ![Daftar Proses Container](screenshot/ps_aux_output.png)
 
 ---
+
+## ⚙️ Langkah 6: Melihat Resource yang Digunakan oleh Container
+
+Untuk memonitor penggunaan sumber daya (CPU, memori, dll) dalam container, gunakan perintah:
+
+```bash
+docker stats fastapi_container
+```
+
+Outputnya akan menampilkan penggunaan resource, seperti berikut:
+
+Gambar output perintah `docker stats`:
+![Docker Stats](screenshot/docker_statss.png)
+
+---
