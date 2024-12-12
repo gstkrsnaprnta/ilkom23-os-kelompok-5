@@ -179,3 +179,50 @@ Dengan langkah ini, Anda telah berhasil menyiapkan folder templates/ dan membuat
 
 ---
 
+### 🚀 Langkah 4: Menjalankan Aplikasi FastAPI
+
+1. *Install FastAPI, Uvicorn, dan Jinja2*:
+
+   bash
+   pip install fastapi uvicorn jinja2
+   
+
+   Gambar instalasi dependensi:
+   
+   ![Install Dependencies](screenshot/install_dependencies.png)
+
+2. *Jalankan aplikasi FastAPI* dengan perintah berikut:
+
+   bash
+   uvicorn main:app --reload
+   
+
+   Gambar aplikasi berjalan:
+   
+   ![Aplikasi Berjalan](screenshot/uvicorn_running.png)
+
+---
+
+### 🌐 Langkah 5: Akses Aplikasi di Browser
+
+1. *Buka browser* dan akses aplikasi di alamat berikut:
+
+   - *Halaman Utama*:
+     text
+     http://127.0.0.1:8000/
+     
+
+     Gambar halaman utama di browser:
+     
+     ![Home Page in Browser](screenshot/home_page.png)
+
+   - *Halaman About*:
+     text
+     http://127.0.0.1:8000/about
+     
+
+     Gambar halaman about di browser:
+     
+     ![About Page in Browser](screenshot/about_page.png)
+
+---
