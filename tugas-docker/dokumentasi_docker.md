@@ -128,3 +128,54 @@ Tutorial ini akan membawa Anda melalui langkah-langkah untuk membuat aplikasi Fa
 
    bash
    touch templates/about.html
+
+
+   
+
+7. **Buka file about.html** dengan *nano* untuk mengeditnya:
+
+   bash
+   nano templates/about.html
+   
+
+8. **Isi about.html** dengan HTML berikut:
+
+   html
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>About - FastAPI Web</title>
+       <style>
+           body {
+               font-family: Arial, sans-serif;
+               text-align: center;
+               margin-top: 50px;
+           }
+           h1 {
+               color: #e74c3c;
+           }
+           p {
+               font-size: 18px;
+           }
+       </style>
+   </head>
+   <body>
+       <h1>About This FastAPI Web App</h1>
+       <p>This web app is created using FastAPI and serves dynamic HTML pages with Jinja2 templates.</p>
+       <a href="/">Go to Home Page</a>
+   </body>
+   </html>
+   
+
+9. *Simpan dan keluar* dari *nano*.
+
+   Gambar file about.html setelah selesai diubah:
+
+   ![About Page Template](screenshot/about_page_template.png)
+
+Dengan langkah ini, Anda telah berhasil menyiapkan folder templates/ dan membuat file template HTML untuk halaman utama dan halaman about. Anda sekarang siap untuk menjalankan aplikasi FastAPI!
+
+---
+
