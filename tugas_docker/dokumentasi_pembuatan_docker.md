@@ -1,4 +1,4 @@
-# 🚀 Tutorial: Membuat Aplikasi FastAPI dengan Web Interface dan Docker
+# 🚀 Membangun Aplikasi Web dengan FastAPI, Jinja2, dan Docker
 
 Tutorial ini akan membawa Anda melalui langkah-langkah untuk membuat aplikasi **FastAPI** dengan **web interface** menggunakan **Jinja2** dan menjalankannya di dalam **Docker container**. Anda akan belajar bagaimana membuat halaman web menggunakan template HTML, merender halaman dengan FastAPI, dan mengemas aplikasi menggunakan Docker.
 
