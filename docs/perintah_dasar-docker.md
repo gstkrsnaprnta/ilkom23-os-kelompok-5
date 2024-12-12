@@ -1,8 +1,7 @@
 # perintah dasar docker
 Berikut adalah beberapa perintah dasar yang sering digunakan dalam Docker untuk mengelola container, image, dan volume.
 
-
-##1. `docker --version
+##1. `docker --version`
 Menampilkan versi Docker yang terinstal di sistem.
 contoh:
 ```bash
@@ -13,7 +12,7 @@ Menampilkan daftar container yang sedang berjalan.
 contoh:
 docker ps
 
-##3. `docker ps -a
+##3. `docker ps -a`
 Menampilkan semua container, termasuk yang berhenti (exited). Ini berguna untuk memeriksa container yang sudah tidak aktif.
 contoh:
 docker ps -a
