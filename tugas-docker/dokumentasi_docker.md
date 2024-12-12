@@ -53,3 +53,78 @@ Tutorial ini akan membawa Anda melalui langkah-langkah untuk membuat aplikasi Fa
    @app.get("/about", response_class=HTMLResponse)
    def about(request: Request):
        return templates.TemplateResponse("about.html", {"request": request})
+3. *Simpan dan keluar* dari *nano*:
+   - Tekan Ctrl + O untuk menyimpan file.
+   - Tekan Enter untuk mengonfirmasi nama file.
+   - Tekan Ctrl + X untuk keluar dari *nano*.
+
+   Gambar kode dalam main.py yang dibuka dengan nano:
+   
+   ![Kode dalam main.py](screenshot/code_mainpy_nano.png)
+   
+---
+
+### 🌐 Langkah 3: Menyiapkan Struktur Folder Template
+
+1. *Buat folder templates/* untuk menyimpan file HTML:
+
+   bash
+   mkdir templates
+   
+
+2. *Buat file home.html* di dalam folder templates/:
+
+   bash
+   touch templates/home.html
+   
+
+3. *Buka file home.html* dengan *nano* untuk mengeditnya:
+
+   bash
+   nano templates/home.html
+   
+
+4. *Isi home.html* dengan HTML berikut:
+
+   html
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Welcome to FastAPI Web</title>
+       <style>
+           body {
+               font-family: Arial, sans-serif;
+               text-align: center;
+               margin-top: 50px;
+           }
+           h1 {
+               color: #3498db;
+           }
+           p {
+               font-size: 18px;
+           }
+       </style>
+   </head>
+   <body>
+       <h1>Welcome to FastAPI Web!</h1>
+       <p>This is a simple web app served by FastAPI.</p>
+       <a href="/about">Go to About Page</a>
+   </body>
+   </html>
+   
+
+5. *Simpan dan keluar* dari *nano*:
+   - Tekan Ctrl + O untuk menyimpan file.
+   - Tekan Enter untuk mengonfirmasi nama file.
+   - Tekan Ctrl + X untuk keluar dari *nano*.
+
+   Gambar file home.html setelah selesai diubah:
+
+   ![Home Page Template](screenshot/home_page_template.png)
+
+6. *Buat file about.html* untuk halaman "About" di dalam folder templates/:
+
+   bash
+   touch templates/about.html
