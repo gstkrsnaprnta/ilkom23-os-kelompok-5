@@ -453,3 +453,24 @@ Perintah ini akan membatasi penggunaan memori container menjadi 512 MB.
 
 Gambar output penggunaan memori:
 ![Memori Container](screenshot/memory_optimizedd.png)
+
+### 2. **Batasan CPU**
+
+Untuk membatasi CPU, Anda bisa menggunakan opsi `--cpus`, seperti berikut:
+
+```bash
+docker run -d -p 8000:8000 --cpus="1.0" --name fastapi_container_new_cpu fastapi-web-app
+```
+
+Perintah ini akan membatasi penggunaan CPU menjadi satu core.
+
+Gambar pengaturan CPU:
+![Pengaturan CPU Container](screenshot/cpu_optimized.png)
+
+---
+
+## 🎉 Selesai!
+
+Selamat, Anda telah berhasil melakukan bedah container untuk aplikasi FastAPI Anda dan menerapkan optimasi resources untuk meningkatkan performa aplikasi Anda di dalam Docker container.
+
+---
