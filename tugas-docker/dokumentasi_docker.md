@@ -340,6 +340,7 @@ Selamat! Anda telah berhasil membuat aplikasi **FastAPI** dengan **web interface
 
 ---
 
+
 Berikut adalah lanjutan dari tutorial Anda dengan langkah-langkah terkait **Bedah Container**, serta **Optimasi Resources** dalam konteks aplikasi FastAPI yang berjalan dalam container Docker. Semua proses dilakukan melalui terminal, dan saya akan sertakan instruksi terkait screenshot pada setiap langkah.
 
 
