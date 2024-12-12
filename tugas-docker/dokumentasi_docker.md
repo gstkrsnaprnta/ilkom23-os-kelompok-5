@@ -319,3 +319,23 @@ Dengan langkah ini, Anda telah berhasil menambahkan Dockerfile dan file `require
    ![Docker Container Running](screenshot/docker_running.png)
 
 ---
+
+### 🌍 Langkah 8: Akses Aplikasi melalui Docker
+
+1. **Buka browser** dan akses aplikasi yang berjalan di Docker di alamat berikut:
+
+   ```text
+   http://127.0.0.1:8000
+   ```
+
+   Gambar tampilan aplikasi di browser (dari Docker):
+   
+   ![Tampilan di Browser (Docker)](screenshot/browser_view_docker.png)
+
+---
+
+## 🎉 Selesai!
+
+Selamat! Anda telah berhasil membuat aplikasi **FastAPI** dengan **web interface** menggunakan **Jinja2** dan menjalankannya di dalam **Docker container**. Anda sekarang dapat mengembangkan aplikasi lebih lanjut dengan menambahkan lebih banyak fitur atau tampilan sesuai kebutuhan.
+
+---
