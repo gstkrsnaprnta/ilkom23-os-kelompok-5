@@ -311,7 +311,7 @@ Dengan langkah ini, Anda telah berhasil menambahkan Dockerfile dan file `require
 2. **Jalankan Docker container**:
 
    ```bash
-   docker run -d -p 8000:8000 fastapi-web-app
+   docker run -d -p 8000:8000 --name fastapi_container fastapi-web-app
    ```
 
    Gambar Docker container berjalan:
