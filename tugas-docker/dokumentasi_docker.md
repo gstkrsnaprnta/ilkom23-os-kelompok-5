@@ -388,3 +388,23 @@ Gambar hasil perintah `ls` di dalam container:
 ![Struktur File dalam Container](screenshot/container_ls_app.png)
 
 ---
+
+## 🖥️ Langkah 4: Memeriksa Sistem Operasi Container
+
+Untuk melihat informasi sistem operasi yang digunakan dalam container, jalankan perintah:
+
+```bash
+cat /etc/os-release
+```
+
+Outputnya akan menunjukkan informasi tentang sistem operasi container, seperti ini:
+
+```
+NAME="Debian"
+VERSION="10 (Buster)"
+```
+
+Gambar output perintah `cat /etc/os-release`:
+![OS Release di Container](screenshot/os_release_output.png)
+
+---
