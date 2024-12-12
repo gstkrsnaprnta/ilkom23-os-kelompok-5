@@ -436,3 +436,20 @@ Gambar output perintah `docker stats`:
 ![Docker Stats](screenshot/docker_statss.png)
 
 ---
+
+## ⚡ Langkah 7: Optimasi Resources untuk Container
+
+Untuk melakukan optimasi resource, Anda bisa mengatur batasan pada CPU dan memori yang digunakan oleh container saat menjalankan aplikasi. Berikut adalah cara untuk melakukan optimasi:
+
+### 1. **Batasan Memori**
+
+Saat menjalankan container, Anda bisa menggunakan opsi `--memory` untuk membatasi penggunaan memori, contohnya:
+
+```bash
+docker run -d -p 8000:8000 --memory="512m" --name fastapi_container_new-memory fastapi-web-app
+```
+
+Perintah ini akan membatasi penggunaan memori container menjadi 512 MB.
+
+Gambar output penggunaan memori:
+![Memori Container](screenshot/memory_optimizedd.png)
