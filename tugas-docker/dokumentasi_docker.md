@@ -408,3 +408,16 @@ Gambar output perintah `cat /etc/os-release`:
 ![OS Release di Container](screenshot/os_release_output.png)
 
 ---
+
+## 🛠️ Langkah 5: Memeriksa Daftar Proses yang Berjalan dalam Container
+
+Untuk melihat proses yang berjalan dalam container, gunakan perintah:
+
+```bash
+ps aux
+```
+
+Gambar daftar proses dalam container:
+![Daftar Proses Container](screenshot/ps_aux_output.png)
+
+---
