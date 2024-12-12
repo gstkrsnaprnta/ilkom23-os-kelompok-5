@@ -360,3 +360,18 @@ Gambar output `docker ps`:
 ![docker ps output](screenshot/docker_ps_output.png)
 
 ---
+
+## 🛠️ Langkah 2: Mengakses Shell di dalam Container
+
+Untuk melihat lebih dalam tentang container, Anda dapat masuk ke dalam container menggunakan perintah berikut:
+
+```bash
+docker exec -it fastapi_container /bin/bash
+```
+
+Ini akan membawa Anda ke dalam shell dari container yang bernama `fastapi_container`.
+
+Gambar tampilan shell dalam container:
+![Shell di dalam Container](screenshot/shell_in_containers.png)
+
+---
