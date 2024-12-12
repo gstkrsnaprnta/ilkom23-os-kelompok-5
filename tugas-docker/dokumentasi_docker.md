@@ -342,19 +342,22 @@ Selamat! Anda telah berhasil membuat aplikasi **FastAPI** dengan **web interface
 
 Berikut adalah lanjutan dari tutorial Anda dengan langkah-langkah terkait **Bedah Container**, serta **Optimasi Resources** dalam konteks aplikasi FastAPI yang berjalan dalam container Docker. Semua proses dilakukan melalui terminal, dan saya akan sertakan instruksi terkait screenshot pada setiap langkah.
 
+
 # 📚 Tutorial: Bedah Container dan Optimasi Resources pada Docker untuk Aplikasi FastAPI
 
 ---
 
 ## 🔍 Langkah 1: Melihat Container yang Berjalan
 
-Setelah Anda berhasil menjalankan aplikasi FastAPI dalam container, periksa container yang sedang berjalan dengan perintah:
+Setelah Anda berhasil menjalankan aplikasi FastAPI dalam container, pastikan container berjalan dengan baik menggunakan perintah berikut:
 
 ```bash
 docker ps
 ```
 
-Outputnya akan menunjukkan daftar container yang aktif, seperti ini:
+Perintah ini akan menampilkan daftar container yang sedang berjalan, termasuk informasi seperti container ID, nama, port mapping, dan lainnya.
+
+Output yang diharapkan akan terlihat seperti ini:
 
 Gambar output `docker ps`:
 ![docker ps output](screenshot/docker_ps_output.png)
@@ -363,13 +366,13 @@ Gambar output `docker ps`:
 
 ## 🛠️ Langkah 2: Mengakses Shell di dalam Container
 
-Untuk melihat lebih dalam tentang container, Anda dapat masuk ke dalam container menggunakan perintah berikut:
+Untuk melihat lebih dalam tentang container Anda, gunakan perintah berikut untuk masuk ke dalam shell container:
 
 ```bash
 docker exec -it fastapi_container /bin/bash
 ```
 
-Ini akan membawa Anda ke dalam shell dari container yang bernama `fastapi_container`.
+Setelah perintah ini, Anda akan masuk ke dalam shell container bernama `fastapi_container`. Anda dapat menjalankan perintah shell seperti biasa di dalam container.
 
 Gambar tampilan shell dalam container:
 ![Shell di dalam Container](screenshot/shell_in_containers.png)
@@ -378,99 +381,157 @@ Gambar tampilan shell dalam container:
 
 ## 🗂️ Langkah 3: Bedah Struktur File dalam Container
 
-Sekarang Anda berada di dalam shell container, Anda bisa menjalankan berbagai perintah untuk menjelajahi sistem file container. Misalnya, periksa direktori kerja container dengan perintah:
+Berikut adalah enam perintah penting yang dapat Anda gunakan untuk mengeksplorasi struktur dan isi container:
+
+### **1. Menampilkan Struktur Direktori Root**
+
+Gunakan perintah ini untuk melihat semua file dan direktori di direktori root container:
 
 ```bash
-ls /app
+ls -lah /
 ```
 
-Gambar hasil perintah `ls` di dalam container:
-![Struktur File dalam Container](screenshot/container_ls_app.png)
+Output ini akan membantu Anda memahami struktur direktori utama dalam container.
+
+Gambar hasil perintah `ls -lah /`:
+![Struktur Root](screenshot/container_ls_root.png)
 
 ---
 
-## 🖥️ Langkah 4: Memeriksa Sistem Operasi Container
+### **2. Memeriksa Informasi Sistem Operasi**
 
-Untuk melihat informasi sistem operasi yang digunakan dalam container, jalankan perintah:
+Untuk melihat detail tentang sistem operasi yang digunakan dalam container:
 
 ```bash
 cat /etc/os-release
 ```
 
-Outputnya akan menunjukkan informasi tentang sistem operasi container, seperti ini:
+Output akan menunjukkan nama OS, versinya, dan detail lainnya.
 
-```
-NAME="Debian"
-VERSION="10 (Buster)"
-```
-
-Gambar output perintah `cat /etc/os-release`:
+Gambar output `cat /etc/os-release`:
 ![OS Release di Container](screenshot/os_release_output.png)
 
 ---
 
-## 🛠️ Langkah 5: Memeriksa Daftar Proses yang Berjalan dalam Container
+### **3. Melihat File Log Aplikasi**
 
-Untuk melihat proses yang berjalan dalam container, gunakan perintah:
+Jika aplikasi Anda mencatat log, Anda dapat memeriksa file lognya dengan:
+
+```bash
+cat /app/logs/app.log
+```
+
+Log akan memberikan wawasan tentang aktivitas aplikasi Anda.
+
+---
+
+### **4. Melihat Proses yang Sedang Berjalan**
+
+Untuk melihat proses yang sedang berjalan secara real-time dalam container, gunakan:
+
+```bash
+top
+```
+
+Anda juga dapat menggunakan perintah `ps aux` untuk daftar proses statis:
 
 ```bash
 ps aux
 ```
 
-Gambar daftar proses dalam container:
+Gambar daftar proses:
 ![Daftar Proses Container](screenshot/ps_aux_output.png)
 
 ---
 
-## ⚙️ Langkah 6: Melihat Resource yang Digunakan oleh Container
+### **5. Memeriksa Penggunaan Disk**
 
-Untuk memonitor penggunaan sumber daya (CPU, memori, dll) dalam container, gunakan perintah:
+Untuk melihat kapasitas dan penggunaan disk pada container, jalankan:
+
+```bash
+df -h
+```
+
+Output akan menunjukkan setiap mount point dalam container dan ruang yang digunakan.
+
+---
+
+### **6. Memeriksa Penggunaan Memori**
+
+Untuk melihat penggunaan memori dalam container:
+
+```bash
+free -m
+```
+
+Output ini akan membantu Anda memantau penggunaan memori dan mengetahui apakah container membutuhkan optimasi lebih lanjut.
+
+Gambar hasil `free -m`:
+![Penggunaan Memori](screenshot/container_memory_output.png)
+
+---
+
+## ⚙️ Langkah 4: Monitoring Resource Container
+
+### **1. Memantau Resource secara Real-Time**
+
+Gunakan perintah berikut untuk melihat penggunaan resource seperti CPU, memori, jaringan, dan disk oleh container Anda:
 
 ```bash
 docker stats fastapi_container
 ```
 
-Outputnya akan menampilkan penggunaan resource, seperti berikut:
+Output ini memberikan gambaran real-time penggunaan resource container, seperti:
 
-Gambar output perintah `docker stats`:
+- **CPU Usage (%)**: Persentase CPU yang digunakan oleh container.
+- **Memory Usage**: Jumlah memori yang digunakan dibandingkan dengan batas memori.
+- **Network I/O**: Data yang masuk dan keluar melalui jaringan.
+- **Block I/O**: Aktivitas baca/tulis ke disk.
+
+Gambar output `docker stats`:
 ![Docker Stats](screenshot/docker_statss.png)
 
 ---
 
-## ⚡ Langkah 7: Optimasi Resources untuk Container
+## ⚡ Langkah 5: Optimasi Resources untuk Container
 
-Untuk melakukan optimasi resource, Anda bisa mengatur batasan pada CPU dan memori yang digunakan oleh container saat menjalankan aplikasi. Berikut adalah cara untuk melakukan optimasi:
+### **1. Membatasi Memori**
 
-### 1. **Batasan Memori**
-
-Saat menjalankan container, Anda bisa menggunakan opsi `--memory` untuk membatasi penggunaan memori, contohnya:
+Untuk menghindari container menggunakan terlalu banyak memori, batasi penggunaan memori container dengan perintah berikut:
 
 ```bash
-docker run -d -p 8000:8000 --memory="512m" --name fastapi_container_new-memory fastapi-web-app
+docker run -d -p 8000:8000 --memory="512m" --name fastapi_container_memory fastapi-web-app
 ```
 
-Perintah ini akan membatasi penggunaan memori container menjadi 512 MB.
+Perintah ini membatasi container agar hanya menggunakan memori hingga 512 MB.
 
-Gambar output penggunaan memori:
-![Memori Container](screenshot/memory_optimizedd.png)
+---
 
-### 2. **Batasan CPU**
+### **2. Membatasi CPU**
 
-Untuk membatasi CPU, Anda bisa menggunakan opsi `--cpus`, seperti berikut:
+Untuk membatasi penggunaan CPU container, gunakan opsi berikut:
 
 ```bash
-docker run -d -p 8000:8000 --cpus="1.0" --name fastapi_container_new_cpu fastapi-web-app
+docker run -d -p 8000:8000 --cpus="1.0" --name fastapi_container_cpu fastapi-web-app
 ```
 
-Perintah ini akan membatasi penggunaan CPU menjadi satu core.
+Perintah ini membatasi penggunaan CPU hingga satu core.
 
-Gambar pengaturan CPU:
-![Pengaturan CPU Container](screenshot/cpu_optimized.png)
+---
+
+### **3. Kombinasi Batasan CPU dan Memori**
+
+Untuk kombinasi batasan CPU dan memori, gunakan perintah berikut:
+
+```bash
+docker run -d -p 8000:8000 --cpus="1.0" --memory="512m" --name fastapi_container_optimized fastapi-web-app
+```
+
+Perintah ini mengoptimasi container untuk menggunakan CPU maksimum satu core dan memori maksimum 512 MB.
 
 ---
 
 ## 🎉 Selesai!
 
-Selamat, Anda telah berhasil melakukan bedah container untuk aplikasi FastAPI Anda dan menerapkan optimasi resources untuk meningkatkan performa aplikasi Anda di dalam Docker container.
-
----
+Anda telah berhasil mempelajari cara membedah container, memahami struktur file di dalamnya, memantau resource, serta melakukan optimasi penggunaan resource untuk aplikasi FastAPI di Docker. Tutorial ini dapat membantu meningkatkan efisiensi aplikasi Anda, terutama ketika menjalankannya di lingkungan yang terbatas. Selamat mencoba! 🚀
+```
