@@ -520,4 +520,3 @@ Perintah ini mengoptimasi container untuk menggunakan CPU maksimum satu core dan
 ## 🎉 Selesai!
 
 Anda telah berhasil mempelajari cara membedah container, memahami struktur file di dalamnya, memantau resource, serta melakukan optimasi penggunaan resource untuk aplikasi FastAPI di Docker. Tutorial ini dapat membantu meningkatkan efisiensi aplikasi Anda, terutama ketika menjalankannya di lingkungan yang terbatas. Selamat mencoba! 🚀
-```
