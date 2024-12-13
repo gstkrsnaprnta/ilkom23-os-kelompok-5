@@ -384,19 +384,39 @@ Gambar tampilan shell dalam container:
 
 Berikut adalah enam perintah penting yang dapat Anda gunakan untuk mengeksplorasi struktur dan isi container:
 
-### **1. Menampilkan Struktur Direktori Root**
+### 1. Menampilkan Struktur Direktori /app 
 
-Gunakan perintah ini untuk melihat semua file dan direktori di direktori root container:
+Gunakan perintah ini untuk melihat semua file dalam app:
 
 ```bash
-ls -lah /
+ls /app
 ```
 
-Output ini akan membantu Anda memahami struktur direktori utama dalam container.
+Output ini akan membantu Anda memahami dan melihat isi file dalam directory app.
 
 ---
 
-### **2. Memeriksa Informasi Sistem Operasi**
+### **2. Membuat File dan Menghapus File**
+
+Untuk membuat file baru di dalam container, Anda bisa menggunakan perintah berikut:
+
+```bash
+touch /app/file_baru.txt
+```
+
+Perintah ini akan membuat file baru bernama `file_baru.txt` di dalam folder `/app`.
+
+Untuk menghapus file yang baru dibuat, Anda bisa menggunakan perintah:
+
+```bash
+rm /app/file_baru.txt
+```
+
+Perintah ini akan menghapus `file_baru.txt` dari folder `/app`.
+
+---
+
+### **3. Memeriksa Informasi Sistem Operasi**
 
 Untuk melihat detail tentang sistem operasi yang digunakan dalam container:
 
@@ -408,17 +428,6 @@ Output akan menunjukkan nama OS, versinya, dan detail lainnya.
 
 ---
 
-### **3. Melihat File Log Aplikasi**
-
-Jika aplikasi Anda mencatat log, Anda dapat memeriksa file lognya dengan:
-
-```bash
-cat /app/logs/app.log
-```
-
-Log akan memberikan wawasan tentang aktivitas aplikasi Anda.
-
----
 
 ### **4. Melihat Proses yang Sedang Berjalan**
 
