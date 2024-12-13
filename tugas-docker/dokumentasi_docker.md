@@ -394,9 +394,6 @@ ls -lah /
 
 Output ini akan membantu Anda memahami struktur direktori utama dalam container.
 
-Gambar hasil perintah `ls -lah /`:
-![Struktur Root](screenshot/container_ls_root.png)
-
 ---
 
 ### **2. Memeriksa Informasi Sistem Operasi**
@@ -408,9 +405,6 @@ cat /etc/os-release
 ```
 
 Output akan menunjukkan nama OS, versinya, dan detail lainnya.
-
-Gambar output `cat /etc/os-release`:
-![OS Release di Container](screenshot/os_release_output.png)
 
 ---
 
@@ -440,9 +434,6 @@ Anda juga dapat menggunakan perintah `ps aux` untuk daftar proses statis:
 ps aux
 ```
 
-Gambar daftar proses:
-![Daftar Proses Container](screenshot/ps_aux_output.png)
-
 ---
 
 ### **5. Memeriksa Penggunaan Disk**
@@ -467,9 +458,6 @@ free -m
 
 Output ini akan membantu Anda memantau penggunaan memori dan mengetahui apakah container membutuhkan optimasi lebih lanjut.
 
-Gambar hasil `free -m`:
-![Penggunaan Memori](screenshot/container_memory_output.png)
-
 ---
 
 ## ⚙️ Langkah 4: Monitoring Resource Container
@@ -488,9 +476,6 @@ Output ini memberikan gambaran real-time penggunaan resource container, seperti:
 - **Memory Usage**: Jumlah memori yang digunakan dibandingkan dengan batas memori.
 - **Network I/O**: Data yang masuk dan keluar melalui jaringan.
 - **Block I/O**: Aktivitas baca/tulis ke disk.
-
-Gambar output `docker stats`:
-![Docker Stats](screenshot/docker_statss.png)
 
 ---
 
